@@ -1,0 +1,103 @@
+
+main {
+    min-height: 80vh;
+}
+
+#navbar{
+    background-color: #202142;
+    color: #fff;
+}
+
+.product-title {
+    height: 2.5em; /* Set a fixed height */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+
+table td,
+table th {
+  text-align: center;
+}
+
+.review {
+    margin-top: 30px;
+}
+
+.review h2 {
+    font-size: 24px;
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.review button {
+    margin-top: 10px;
+}
+
+
+.rating span {
+    margin: 0.1rem;
+}
+
+.rating{
+color: #ff6a95;
+}
+  
+.rating-text {
+font-size: 0.8rem;
+font-weight: 600;
+padding-left: 0.5rem;
+}
+
+
+.btn-primary{
+    outline-style: none;
+    border-color: transparent;
+    background-color: #202142!important;
+    color: #fff; 
+}
+.btn-primary:hover{
+      background-color: #ff6a95; 
+      outline-style: none;
+      border-color: transparent;
+}
+.badge-header{
+    background-color: #ff6a95!important; 
+    margin-left: 2px;
+}
+
+.searchBox{
+    background-color: #ff6a95!important; 
+}
+
+.toast-position {
+    top: 8rem !important;
+}
+/* Step1 Step4 Step3 Step4 */
+.checkout-steps .active {
+    border-bottom: 0.2rem solid #ff6a95;
+    color: #000;
+    
+}
+.checkout-steps .active:hover {
+    color: #ff6a95;
+}
+
+.carousel-caption {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+
+#footer{
+    bottom: 0; 
+    background-color: #202142;
+    color: #fff;
+}
+

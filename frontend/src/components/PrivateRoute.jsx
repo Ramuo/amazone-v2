@@ -1,0 +1,10 @@
+import {Outlet, Navigate} from 'react-router-dom'; // OUTLET is what we want to return if logged  in, if not logged in we navigate (redirect)
+import {useSelector} from 'react-redux';
+
+const PrivateRoute = () => {
+    const {userInfo} = useSelector((state) => state.auth);
+
+    return userInfo ? <Outlet/> : <Navigate to='/login' replace/>
+};
+
+export default PrivateRoute;
