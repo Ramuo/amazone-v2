@@ -53,6 +53,7 @@ if(process.env.NODE_ENV === 'production'){
     app.get('/', (req, res) => res.send('API Running'));
 };
 
+
 //MIDDLEWARE ERROR HANDLER
 app.use(notFound);
 app.use(errorHandler);
