@@ -15,7 +15,7 @@ import asyncHandler from '../middleware/asyncHandler.js';
 //@access Public
 const getProducts = asyncHandler(async(req, res) => {
     //1- Let's initialize a page Size variable
-    const pageSize = 8;
+    const pageSize = process.env.PAGINATION_LIMIT;
     //2- Let's initialize a page variable and set it to the page number in the Url. 
     //to get query params in url, we user: req.query.pageNumber, if that not there we set it to one
     const page = Number(req.query.pageNumber) || 1;
