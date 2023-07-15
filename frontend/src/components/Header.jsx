@@ -1,9 +1,10 @@
-import {useNavigate} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import {Navbar, Nav, Container, Badge, NavDropdown} from 'react-bootstrap';
-import {FaShoppingCart, FaUser} from 'react-icons/fa';
+import {useNavigate} from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
+import {Badge, Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import SearchBox from './SearchBox';
+
 
 
 import {useLogoutMutation} from '../slices/userApiSlice'; //To logout the api (server) logoutApiCall
@@ -34,7 +35,7 @@ const Header = () => {
             <Navbar variant='dark' expand='lg' collapseOnSelect id="navbar">
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand >
+                        <Navbar.Brand>
                             FASHION+
                         </Navbar.Brand>
                     </LinkContainer>
