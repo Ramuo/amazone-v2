@@ -9,6 +9,7 @@ import SearchBox from './SearchBox';
 
 import {useLogoutMutation} from '../slices/userApiSlice'; //To logout the api (server) logoutApiCall
 import { logout} from '../slices/authSlice'; // To logout localy
+import { resetCart } from '../slices/cartSlice';
 
 const Header = () => {
     const {cartItems} = useSelector((state) => state.cart);
@@ -23,6 +24,9 @@ const Header = () => {
         try {
             await logoutApiCall().unwrap();
             dispatch(logout());
+            // NOTE: here we need to reset cart state for when a user logs out so the next
+            // user doesn't inherit the previous users cart and shipping
+            dispatch(resetCart());
             navigate('/login');
         } catch (err) {
             console.log(err);

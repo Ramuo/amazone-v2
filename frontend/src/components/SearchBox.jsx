@@ -7,7 +7,7 @@ const SearchBox = () => {
     const navigate = useNavigate();
     const { keyword: urlKeyword } = useParams();
  
-    const [keyword, setKeyword] = useState(urlKeyword);
+    const [keyword, setKeyword] = useState(urlKeyword || ' ');
 
 
     const submitHandler = (e) => {
@@ -19,7 +19,7 @@ const SearchBox = () => {
             navigate('/');
         }
     };
-
+ 
     return (
     <Form onSubmit={submitHandler} className='d-flex'>
         <InputGroup>

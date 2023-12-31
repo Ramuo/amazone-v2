@@ -127,7 +127,7 @@ const OrderPage = () => {
     };
 
     //RENDERED ELEMENTS:
-    return isLoading ? (<Loader/>) : error ? (<Message variant='danger'>{}</Message>) : (
+    return isLoading ? (<Loader/>) : error ? (<Message variant='danger'>{error.data.message}</Message>) : (
         <>
             <Row>
                 <Col md={8}>

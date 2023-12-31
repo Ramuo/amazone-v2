@@ -74,7 +74,7 @@ const UserEditPage = () => {
                 <Loader/>
             ) : error ? (
                 <Message variant='danger'>
-                    {error}
+                    {error.data.message}
                 </Message>
             ) : (
             

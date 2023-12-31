@@ -5,7 +5,7 @@ import {useParams} from 'react-router-dom';
 import {toast} from 'react-toastify';
 import Message from '../../components/Message';
 import Loader from '../../components/Loader';
-import Paginate from '../../components/Paginate';
+import Paginate from '../../components/Paginate'; 
 
 
 import {
@@ -81,7 +81,7 @@ const ProductListPage = () => {
       {isLoadingDelete && <Loader/>}
 
       {isLoading ? (<Loader/>) : error ? (
-        <Message variant='danger'>{error}</Message>
+        <Message variant='danger'>{error.data.message}</Message>
       ) : (
         <>
           <Table striped bordered hover responsive className='table-sm'>

@@ -14,7 +14,7 @@ import {protect, admin} from '../middleware/authMiddleware.js'
 
 //Initialize router
 const router = express.Router();
-
+ 
 router.route('/').get(protect, admin, getUsers);
 router.route('/register').post(registerUser)
 router.route('/logout').post(logoutUser);

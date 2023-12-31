@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {Row, Col, Form, Button} from 'react-bootstrap';
 import FormContainer from '../components/FormContainer';
 import Loader from '../components/Loader';
-import {toast} from 'react-toastify'
+import {toast} from 'react-toastify';
 
 import {useRegisterMutation} from '../slices/userApiSlice';
 import { setCredentials } from '../slices/authSlice';
@@ -43,7 +43,7 @@ const RegisterPage = () => {
         if(password !== confirmPassword){
             toast.error("Mot de passe non identique");
             return;
-        }{
+        }else{
             try {
                 const res = await register({ name, email, password }).unwrap();
                 dispatch(setCredentials({ ...res }));

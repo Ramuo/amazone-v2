@@ -3,7 +3,6 @@ import User  from '../models/userModel.js';
 import generateToken from '../utils/generateToken.js';
 
 
-
 //@desc     Login user & and get the token (signin)
 //@route    POST /api/users/login
 //@access   Public

@@ -15,15 +15,15 @@ const userSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        required: true
+        required: true 
     },
     isAdmin: {
         type: Boolean,
         required: true,
-        default: 0
+        default: false,
     },
 }, {timestamps: true});
-
+ 
 //TO AUTHANTICATE USER PASSWORD
 userSchema.methods.matchPassword = async function(enteredPassword){
     return await bcrypt.compare(enteredPassword, this.password);

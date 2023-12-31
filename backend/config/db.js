@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import color from 'colors'
+import color from 'colors';
 
 
 const connectDB  = async () => {
@@ -9,7 +9,7 @@ const connectDB  = async () => {
     } catch (error) {
         console.log(`Error: ${error.message}`.red.underline.bold);
         process.exit(1);
-    }
+    };
 };
 
 export default connectDB;
