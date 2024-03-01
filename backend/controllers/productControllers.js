@@ -39,7 +39,11 @@ const getProducts = asyncHandler(async(req, res) => {
         .skip(pageSize * (page - 1));
 
 
-    res.status(200).json({products, page, pages: Math.ceil(count / pageSize)});
+    res.status(200).json({
+        products, 
+        page, 
+        pages: Math.ceil(count / pageSize)
+    });
 });
 
 
@@ -113,7 +117,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     }
 });
 
-//@desc     Delete All Product
+//@desc     Delete Product
 //@route    DELETE api/products/:id
 //@access   Private/Admin
 const deleteProduct = asyncHandler(async(req, res) => {

@@ -20,6 +20,7 @@ const HomePage = () => {
         error
     } = useGetProductsQuery({keyword, pageNumber});
    
+
     return (
         <>
             {!keyword ? <ProductCarousel/> : (

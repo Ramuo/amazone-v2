@@ -39,6 +39,8 @@ import ProductListPage from './pages/admin/ProductListPage';
 import ProductEditPage from './pages/admin/ProductEditPage';
 import UsersListPage from './pages/admin/UsersListPage';
 import UserEditPage from './pages/admin/UserEditPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
 
  
 
@@ -58,6 +60,8 @@ const router = createBrowserRouter(
       <Route path='/cart' element={<CartPage/>}/>
       <Route path='/login' element={<LoginPage/>}/>
       <Route path='/register' element={<RegisterPage/>}/>
+      <Route path='/forgotpassword' element={<ForgotPasswordPage/>}/>
+      <Route path='/resetpassword/:token' element={<ResetPasswordPage/>}/>
       
       <Route path='' element={<PrivateRoute/>}>
         <Route path='/shipping' element={<ShippingPage/>}/>
@@ -94,3 +98,4 @@ root.render(
 );
 
 reportWebVitals();
+

@@ -29,6 +29,7 @@ const UserEditPage = () => {
         refetch, 
         error 
     } = useGetUserByIdQuery(userId);
+    console.log(user)
     
 
     const [

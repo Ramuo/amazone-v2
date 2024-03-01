@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {Row, Col, Form, Button} from 'react-bootstrap';
 import FormContainer from '../components/FormContainer';
 import Loader from '../components/Loader';
-import {toast} from 'react-toastify'
+import {toast} from 'react-toastify';
 
 import {useLoginMutation} from '../slices/userApiSlice';
 import { setCredentials } from '../slices/authSlice';
@@ -84,6 +84,9 @@ const LoginPage = () => {
                     <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
                         S'inscrire
                     </Link>
+                </Col>
+                <Col>
+                    <Link to="/forgotpassword" className="float-end mb-4">Forgot Password?</Link>
                 </Col>
             </Row>
         </FormContainer>

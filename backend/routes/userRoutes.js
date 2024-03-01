@@ -8,7 +8,9 @@ import {
     getUsers,
     getUserById,
     deleteUser,
-    updateUser
+    updateUser,
+    forgotPassword,
+    resetPassword
 } from '../controllers/userControllers.js'; 
 import {protect, admin} from '../middleware/authMiddleware.js'
 
@@ -22,6 +24,8 @@ router.route('/login').post(loginUser);
 router.route('/profile')
     .get(protect, getUserProfile)
     .put(protect, updateUserProfile);
+router.route("/forgotpassword").post(forgotPassword);
+router.route("/resetpassword/:resettoken").put(resetPassword);
 router.route('/:id')
     .delete(protect, admin, deleteUser)
     .get(protect, admin, getUserById)

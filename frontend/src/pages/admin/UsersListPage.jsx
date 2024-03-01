@@ -14,6 +14,8 @@ import {
 const UsersListPage = () => {
     const {data: users, isLoading, error, refetch} = useGetUsersQuery();
 
+  
+
     const [deleteUser, {isLoading: loadingDelete}] = useDeleteUserMutation();
     
 
